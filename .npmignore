@@ -1,0 +1,7 @@
+.idea/
+src/
+index.html
+vite.config.ts
+tsconfig*.json
+.eslintrc*
+.prettierrc

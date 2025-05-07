@@ -1,0 +1,55 @@
+{
+  "name": "vue3-tri-state-checkbox",
+  "version": "0.0.1",
+  "description": "A Vue 3 tri-state checkbox component using the Composition API and TypeScript.",
+  "main": "dist/tri-state-checkbox.umd.cjs",
+  "module": "dist/tri-state-checkbox.js",
+  "unpkg": "dist/tri-state-checkbox.umd.cjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "vue3",
+    "vue",
+    "checkbox",
+    "tri-state",
+    "typescript",
+    "component",
+    "composition-api"
+  ],
+  "author": "Frino",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.14",
+    "@typescript-eslint/eslint-plugin": "^8.32.0",
+    "@typescript-eslint/parser": "^8.32.0",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/eslint-config-typescript": "^14.5.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.17.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-vue": "^10.1.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.3",
+    "vue-eslint-parser": "^10.1.3",
+    "vue-tsc": "^2.2.10"
+  }
+}
