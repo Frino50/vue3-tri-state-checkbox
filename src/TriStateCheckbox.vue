@@ -8,6 +8,7 @@
             :aria-checked="ariaChecked"
             :tabindex="disabled ? -1 : 0"
             @keydown.space.prevent="!disabled && toggleState()"
+            :aria-disabled="disabled"
         >
             <span v-if="model === true">✓</span>
             <span v-else-if="model === false">X</span>
