@@ -1,19 +1,17 @@
 <template>
     <div class="main">
-        <div class="center-checkbox">
-            <div
-                class="checkbox"
-                :style="checkboxStyle"
-                @click="!disabled && toggleState()"
-                role="checkbox"
-                :aria-checked="ariaChecked"
-                :tabindex="disabled ? -1 : 0"
-                @keydown.space.prevent="!disabled && toggleState()"
-            >
-                <span v-if="model === true">✓</span>
-                <span v-else-if="model === false">X</span>
-                <span v-else></span>
-            </div>
+        <div
+            class="checkbox"
+            :style="checkboxStyle"
+            @click="!disabled && toggleState()"
+            role="checkbox"
+            :aria-checked="ariaChecked"
+            :tabindex="disabled ? -1 : 0"
+            @keydown.space.prevent="!disabled && toggleState()"
+        >
+            <span v-if="model === true">✓</span>
+            <span v-else-if="model === false">X</span>
+            <span v-else></span>
         </div>
 
         <div class="label-container">
@@ -59,8 +57,7 @@ const ariaChecked = computed(() =>
 );
 
 const checkboxStyle = computed(() => {
-    let bgColor = "";
-    let borderColor = "";
+    let bgColor: string;
     let color = "white";
 
     if (model.value === true) {
@@ -73,7 +70,7 @@ const checkboxStyle = computed(() => {
 
     return {
         backgroundColor: bgColor,
-        border: `0.1rem solid ${borderColor}`,
+        border: `0.1rem solid ${color}`,
         color,
         cursor: props.disabled ? "not-allowed" : "pointer",
         opacity: props.disabled ? 0.6 : 1,
@@ -94,12 +91,6 @@ const checkboxStyle = computed(() => {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.center-checkbox {
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
 }
 
 .checkbox {
