@@ -1,6 +1,6 @@
 {
   "name": "vue3-tri-state-checkbox",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Vue 3 tri-state checkbox component using the Composition API and TypeScript.",
   "main": "dist/tri-state-checkbox.umd.cjs",
   "module": "dist/tri-state-checkbox.js",

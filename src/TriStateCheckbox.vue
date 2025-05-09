@@ -1,9 +1,8 @@
 <template>
-    <div class="main">
+    <div class="main" @click="!disabled && toggleState()">
         <div
             class="checkbox"
             :style="checkboxStyle"
-            @click="!disabled && toggleState()"
             role="checkbox"
             :aria-checked="ariaChecked"
             :tabindex="disabled ? -1 : 0"
@@ -71,7 +70,6 @@ const checkboxStyle = computed(() => {
 
     return {
         backgroundColor: bgColor,
-        border: `0.1rem solid ${color}`,
         color,
         cursor: props.disabled ? "not-allowed" : "pointer",
         opacity: props.disabled ? 0.6 : 1,
@@ -84,10 +82,10 @@ const checkboxStyle = computed(() => {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: default;
 }
 
 .label-container {
-    min-width: 6.25rem;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -103,5 +101,9 @@ const checkboxStyle = computed(() => {
     justify-content: center;
     border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
+    border: 0.1rem solid #e5e7eb;
+}
+.main:hover .checkbox {
+    border-color: #9ca3af;
 }
 </style>
